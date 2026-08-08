@@ -1,12 +1,10 @@
 FROM python:3.11-slim
 
-# Install dependencies
 RUN pip install --no-cache-dir \
     edge-tts \
     fastapi \
     uvicorn
 
-# Copy app
 COPY server.py /app/server.py
 
 WORKDIR /app
